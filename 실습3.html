@@ -1,0 +1,66 @@
+<html>
+
+  <head>
+    <style>
+      
+    </style>
+  </head>
+
+  <body>
+
+    <input type="button" value="night" onclick="
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        document.querySelector('body').style.transition ='all 1s';
+
+    ">
+
+    <input type="button" value ="day" onclick="
+    
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        document.querySelector('body').style.transition ='all 1s';
+    ">
+
+    <input id="night_day" type="button" value="night" onclick="
+
+        var target = document.querySelector('body');
+        if(this.value === 'night'){
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
+            target.style.transition ='all 1s';
+            this.value = 'day';
+
+            var alist = document.querySelectorAll('a');
+            
+            for(var i=0; i<alist.length; i++){
+                alist[i].style.color ='green'
+            }
+
+
+        }else{
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            target.style.transition ='all 1s';
+            this.value = 'night';
+
+            var alist = document.querySelectorAll('a');
+
+            for(var i=0; i<alist.length; i++){
+                alist[i].style.color = 'yellow';
+            }
+        }
+    
+    ">
+
+
+    <h1>생활코딩</h1>
+
+    <ul>
+        <li><a href="w">html</a></li>
+        <li><a href="w">css</a></li>
+        <li><a href="w">java script</a></li>
+    </ul>
+  </body>
+
+</html>
