@@ -1,0 +1,40 @@
+<html>
+
+  <head>
+    <!-- 입력에 해당하는 것은 parameter 매개변수, 인자
+         출력에 해당하는 것은 return
+     -->
+  </head>
+
+  <body>
+    <h1>function</h1>
+    <h2>Basic</h2>
+    <ul>
+        <script>
+            function two(){
+                document.write('<li>2-1</li>');
+                document.write('<li>2-2</li>');
+            }
+            document.write('<li>1</li>');
+            two();
+            document.write('<li>3</li>');
+            two();
+        </script>
+    </ul>
+    <h2>parameter & argument</h2>
+        <script>
+            function onePlusOne(){
+            document.write(1+1+'<br>');
+            }
+            onePlusOne();
+
+            sum(2,3); // 2, 3은 인자 영어로 argument
+            function sum(i,j){   // i와j는 매개변수이다. parameter
+                document.write(i+j);
+            }
+
+        </script>
+    <h2>Return</h2>
+  </body>
+
+</html>

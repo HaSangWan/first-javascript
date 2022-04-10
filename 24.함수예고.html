@@ -1,0 +1,56 @@
+<html>
+
+  <head>
+    <script>
+        function nightHandler(self){
+            var target = document.querySelector('body'); // 중복을 제거하기위해서 사용한다.
+            if(self.value==='night'){  
+                target.style.backgroundColor='black';
+                target.style.color='white';
+                target.style.transition = 'all 1s';
+                self.value = 'day';
+
+            var alist = document.querySelectorAll('a');
+            var i=0;
+            while(i<alist.length){
+              alist[i].style.color='green';
+              i++;
+          }
+        }
+            else{
+                target.style.backgroundColor='white';
+                target.style.color='black';
+                self.value='night';
+
+                var alist = document.querySelectorAll('a');
+                var i=0;
+
+                while(i<alist.length){
+                alist[i].style.color ='yellow';
+                i++;
+          }
+        }
+    }
+    </script>
+  </head>
+
+  <body>
+ 
+    <input type="button" value="night" onclick="
+       nightHandler(this);
+    ">
+
+    <input type="button" value="day" onclick="
+        nightHandler(this);
+    ">
+   
+   <h1>생활코딩</h1>
+
+   <ol>
+       <li><a href = "www.naver.com">html</a></li>
+       <li><a href = "www.naver.com">css</a></li>
+       <li><a href = "www.naver.com">javascript</a></li>
+   </ol>
+  </body>
+
+</html>

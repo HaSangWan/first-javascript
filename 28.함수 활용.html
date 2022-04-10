@@ -1,0 +1,54 @@
+<html>
+
+  <head>
+    <script>
+    function nightDayHandler(self){
+        var target = document.querySelector('body');
+        if(self.value === 'night'){
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
+            target.style.transition ='all 1s';
+            self.value = 'day';
+
+            var alist = document.querySelectorAll('a');
+            
+            for(var i=0; i<alist.length; i++){
+                alist[i].style.color ='green'
+            }
+
+
+        }else{
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            target.style.transition ='all 1s';
+            self.value = 'night';
+
+            var alist = document.querySelectorAll('a');
+
+            for(var i=0; i<alist.length; i++){
+                alist[i].style.color = 'yellow';
+            }
+        }
+    }
+    </script>
+  </head>
+
+  <body>
+
+    <input id="night_day" type="button" value="night" onclick="
+    nightDayHandler(this) ">
+
+    <input id="night_day" type="button" value="night" onclick="
+    nightDayHandler(this) ">
+
+
+    <h1>생활코딩</h1>
+
+    <ul>
+        <li><a href="w">html</a></li>
+        <li><a href="w">css</a></li>
+        <li><a href="w">java script</a></li>
+    </ul>
+  </body>
+
+</html>
