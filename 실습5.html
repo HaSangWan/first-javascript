@@ -1,0 +1,50 @@
+<html>
+
+  <head>
+    <script>
+        function nightDayChange(self){
+
+            var target = document.querySelector('body');
+            if(document.querySelector('#night_day').value==='night'){
+                target.style.backgroundColor = 'black';
+                target.style.color = 'white';
+                self.value = 'day';
+
+                var alist = document.querySelectorAll('a');
+
+                for(var i=0; i<alist.length; i++){
+
+                    alist[i].style.color ='green';
+                }
+
+
+            }else{
+                target.style.backgroundColor = 'white';
+                target.style.color = 'black';
+                self.value = 'night';
+
+                for(var i=0; i<alist.length; i++){
+
+                    alist[i].style.color ='yellow';
+              }
+            }
+            
+        }
+    </script>
+  </head>
+
+  <body>
+    <h1>생활코딩</h1>
+
+    <input id = "night_day" type="button" value="night" onclick="
+        nightDayChange(this);
+    ">
+
+    <ul>
+        <li><a href="w">html</a></li>
+        <li><a href="w">css</a></li>
+        <li><a href="w">java</a></li>
+    </ul>
+  </body>
+
+</html>
